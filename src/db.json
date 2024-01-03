@@ -1,0 +1,8 @@
+{
+    "flights": [
+      { "id": 1, "airline": "Pobeda", "price": 5000, "duration": 120, "stops": 0 },
+      { "id": 2, "airline": "Red Wings", "price": 7000, "duration": 180, "stops": 1 },
+      { "id": 3, "airline": "S7", "price": 9000, "duration": 240, "stops": 2 }
+    ]
+}
+  

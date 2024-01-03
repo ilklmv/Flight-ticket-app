@@ -1,0 +1,45 @@
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #E8EBF2;
+    border-radius: 0.625rem;
+    width: 14rem;
+    height: 12rem;
+}
+
+h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #4E148C;
+    margin-bottom: 2rem;
+}
+
+.checkbox-item {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.188rem;
+    letter-spacing: 0rem;
+    text-align: left;
+    color: #858AE3;
+}
+
+.radio-group{
+    border-radius: 0.625rem;
+}
+
+.radio-item {
+    background-color: #E8EBF2;
+    border: 1px solid #4E148C;
+}
+
+.radio-item:hover {
+    background-color: #4E148C;
+    color: #F7F9F7;
+}
