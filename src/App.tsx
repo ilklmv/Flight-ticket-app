@@ -9,8 +9,8 @@ import Filters from './components/filters';
 import FlightList from './components/flightList';
 import LoadMoreButton from './components/loadMoreButton';
 import store, { RootState } from './app/store';
-import FilterPanel from './filterPanel';
-import RadioPanel from './radioPanel';
+import FilterPanel from './components/filterPanel';
+import './App.css'
 
 const App: React.FC = () => {
   const dispatch = useDispatch<ThunkDispatch<RootState, undefined, AnyAction>>();
@@ -21,15 +21,24 @@ const App: React.FC = () => {
   }, [dispatch]);  
 
   return (
-    <Provider store={store}>
+    <div className='app-body'>
       <Header />
-      <Filters />
-      <FlightList flights={flights} />
-      <LoadMoreButton onClick={() => {}} />
-      <FilterPanel />
-      <RadioPanel />
-    </Provider>
+      <div className='container'>
+        <FilterPanel />
+        <div className='ticket'>
+          <Filters />
+          <FlightList flights={flights} />
+          <LoadMoreButton onClick={() => {}} />
+        </div>
+      </div>
+    </div>
   );
 };
 
-export default App;
+const AppWrapper: React.FC = () => (
+  <Provider store={store}>
+    <App />
+  </Provider>
+);
+
+export default AppWrapper;

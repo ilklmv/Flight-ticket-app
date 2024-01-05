@@ -87,5 +87,5 @@ export default flightsSlice.reducer;
 
 export const fetchMoreFlights = createAsyncThunk('flights/fetchMoreFlights', async () => {
   const response = await api.get('/more-flights');
-  return response.data as Flight[]; // Уточняем тип данных, который ожидаем получить
+  return response.data as Flight[]; 
 });

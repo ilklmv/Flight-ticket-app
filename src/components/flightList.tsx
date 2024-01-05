@@ -1,9 +1,10 @@
-// FlightList.tsx
+// flightList.tsx
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../app/store';
+import '../styles/flightList.scss';
 
-interface Flight {
+export interface Flight {
   id: number;
   airline: string;
   price: number;
@@ -54,8 +55,7 @@ const FlightList: React.FC<FlightListProps> = ({ flights }) => {
   const sortedAndFilteredFlights = filterFlights(sortFlights(flights));
 
   return (
-    <div>
-      <h2>Список рейсов</h2>
+    <div className='plane-information'>
       <ul>
         {sortedAndFilteredFlights.map((flight) => (
           <li key={flight.id}>
